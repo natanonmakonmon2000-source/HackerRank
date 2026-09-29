@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+        
+from itertools import product
+
+not_equal = n
+
+positions_x = list(range(x + 1))
+positions_y = list(range(y + 1))
+positions_z = list(range(z + 1))
+    
+main_list = [
+    [i,j,k]for i,j,k in product(positions_x, positions_y, positions_z)
+    if(0 <= i <= x)and(0 <= j <= y)and(0 <= k <= z)and(sum([i,j,k])!=not_equal)
+]           
+
+print(main_list)
