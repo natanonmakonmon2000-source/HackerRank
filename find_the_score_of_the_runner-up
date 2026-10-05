@@ -1,0 +1,12 @@
+arr = [scores of each player]
+
+#make a arr a list by applying list()    
+scores = list(arr)
+#cut the same value(dublicate) out to make sorting easier.   
+turn_set = set(scores)
+#sorting value from low to high
+sorted_set = sorted(turn_set) 
+#set the position that we want to show
+final = sorted_set[-2]
+
+print(final)
