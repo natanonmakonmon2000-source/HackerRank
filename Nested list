@@ -1,0 +1,31 @@
+#input
+if __name__ == '__main__':
+    
+    empty_list = []
+    
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        empty_list.append([name, score])
+        
+        
+total_scores = []
+name_group = []
+
+for student in empty_list:
+    total_scores.append(student[1])
+
+dub_out = list(set(total_scores))
+sorted_num = sorted(dub_out)
+finish_num = sorted_num
+
+for student in empty_list:
+    if student[1] == finish_num[1]:
+        name_group.append(student[0])
+        
+final_name = sorted(name_group)
+
+#Ordered alphabetically
+for name_naka in final_name:
+    print(name_naka)         
+        
